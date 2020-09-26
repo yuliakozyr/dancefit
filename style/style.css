@@ -469,16 +469,10 @@ p {
 }
 
 .contacts__left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   max-width: 50%;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 .contacts__left img {
