@@ -1,0 +1,616 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,300&display=swap");
+/*Обнуление*/
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/*Стили для демонстрации*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  font-size: 14px;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+header:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #b0e6e8;
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #b0e6e8), color-stop(38%, rgba(230, 214, 235, 0.92)), color-stop(50%, rgba(217, 179, 230, 0.9)), color-stop(63%, rgba(157, 201, 209, 0.87)), color-stop(82%, rgba(168, 111, 222, 0.84)), color-stop(97%, rgba(170, 149, 191, 0.81)), color-stop(100%, rgba(170, 149, 191, 0.8)));
+  background: linear-gradient(135deg, #b0e6e8 0%, rgba(230, 214, 235, 0.92) 38%, rgba(217, 179, 230, 0.9) 50%, rgba(157, 201, 209, 0.87) 63%, rgba(168, 111, 222, 0.84) 82%, rgba(170, 149, 191, 0.81) 97%, rgba(170, 149, 191, 0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b0e6e8', endColorstr='#aa95bf', GradientType=1);
+  z-index: 2;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 24px;
+  color: #333;
+}
+
+.header__body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+}
+
+.logo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60px;
+          flex: 0 0 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+
+.logo img {
+  display: block;
+  max-width: 100%;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+.header__list li {
+  list-style: none;
+  margin: 0 0 0 20px;
+}
+
+.header__list a {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.header__list a:hover {
+  text-shadow: 1px 1px 2px #AA95BF;
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .header__list a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+  }
+  .burger:before,
+  .burger:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+  }
+  .burger span,
+  .burger:before,
+  .burger:after {
+    background-color: #fff;
+  }
+  .burger:before {
+    top: 0;
+  }
+  .burger::after {
+    bottom: 0;
+  }
+  .burger span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 9px;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+  }
+  .burger.active:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 9px;
+  }
+  .burger.active:after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .burger.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  header {
+    height: 60px;
+  }
+  .header__body {
+    height: 60px;
+  }
+  header:before {
+    content: "";
+    z-index: 3;
+    height: 60px;
+  }
+  .logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40px;
+            flex: 0 0 40px;
+  }
+  .header__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #AA95BF;
+    padding: 70px 10px 20px 10px;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+  }
+  .header__list a:active {
+    text-shadow: 1px 1px 2px #b0e6e8;
+  }
+  .header__menu.active {
+    top: 0;
+  }
+  .header__list {
+    display: block;
+  }
+  .header__list li {
+    margin: 0 0 20px 0;
+  }
+  body.lock {
+    overflow: hidden;
+  }
+}
+
+/*Стили основного блока*/
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+.fullscreen {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.fullscreen_about,
+.fullscreen_dancefit,
+.fullscreen_kids,
+.fullscreen_english,
+.fullscreen_contacts {
+  -webkit-box-shadow: 0px 2px 14px -10px #666666, 0px -6px 14px -10px #666666;
+  box-shadow: 0px 2px 14px -10px #666666, 0px -6px 14px -10px #666666;
+}
+
+.fullscreen__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+
+.fullscreen__title {
+  font-size: 40px;
+  margin: 0 0 20px 0;
+}
+
+.fullscreen__text p {
+  margin: 0 0 20px 0;
+}
+
+.fullscreen__text ul li {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.fullscreen__text ul li:before {
+  content: "\2022";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #AA95BF;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+}
+
+.fullscreen__link {
+  display: inline-block;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  background: #AA95BF;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0 30px;
+  margin: 20px 0 0 0;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.fullscreen__link:before {
+  content: '';
+  display: none;
+  width: 100px;
+  height: 50px;
+  -webkit-transform: skew(-40deg);
+          transform: skew(-40deg);
+  background: white;
+  background: linear-gradient(-40deg, rgba(255, 255, 255, 0) 12%, rgba(255, 255, 255, 0.703519) 44%, rgba(255, 255, 255, 0.80716) 49%, rgba(255, 255, 255, 0) 94%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+  position: absolute;
+  top: 0px;
+  left: -120px;
+  z-index: 2;
+  -webkit-animation: blink 0.15s linear 0s;
+          animation: blink 0.15s linear 0s;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    left: 0px;
+  }
+  100% {
+    -webkit-transform: translate(300%, 0%);
+            transform: translate(300%, 0%);
+  }
+}
+
+@keyframes blink {
+  0% {
+    left: 0px;
+  }
+  100% {
+    -webkit-transform: translate(300%, 0%);
+            transform: translate(300%, 0%);
+  }
+}
+
+.fullscreen__link:hover.fullscreen__link:before {
+  display: block;
+}
+
+.fullscreen_about .fullscreen__link {
+  margin-bottom: 80px;
+}
+
+.fullscreen__link:active {
+  background: #eed0f6;
+}
+
+.portrait {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  overflow: hidden;
+  margin: 80px 0 20px 0;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+}
+
+@-webkit-keyframes topdown {
+  from {
+    -webkit-transform: translate(0%, 50%);
+            transform: translate(0%, 50%);
+  }
+  to {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+@keyframes topdown {
+  from {
+    -webkit-transform: translate(0%, 50%);
+            transform: translate(0%, 50%);
+  }
+  to {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+.arrow {
+  width: 50px;
+  margin: 50px 0 0 0;
+  position: absolute;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  bottom: 20px;
+  -webkit-animation: topdown 1s ease-out 0.5s infinite alternate;
+          animation: topdown 1s ease-out 0.5s infinite alternate;
+}
+
+.arrow img {
+  width: 100%;
+}
+
+.fullscreen_dancefit .fullscreen__text,
+.fullscreen_kids .fullscreen__text,
+.fullscreen_english .fullscreen__text {
+  text-align: left;
+}
+
+.contacts__body {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 100%;
+}
+
+.contacts__body p {
+  margin: 0 0 20px 0;
+}
+
+.contacts__body p:last-child {
+  margin: 0;
+}
+
+.contacts__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.contacts__left img {
+  display: block;
+  max-width: 100%;
+}
+
+.contacts__right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0 0 5%;
+}
+
+.contacts__text {
+  position: relative;
+  left: 40px;
+}
+
+.contacts__icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 10px 0 0;
+  position: absolute;
+  top: -2px;
+  left: -40px;
+}
+
+.tel {
+  background: url("../img/icons/phone.svg") 0 0/cover no-repeat;
+}
+
+.ig {
+  background: url("../img/icons/instagram.svg") 0 0/cover no-repeat;
+}
+
+.contacts__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (max-width: 880px) {
+  .contacts__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacts__right {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    padding: 20px 5% 40px;
+  }
+  .contacts__left {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: 5% 0 0 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .contacts__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.fullscreen-bg1 {
+  background: url("../img/dancefit-grown-ups.jpg") center/cover no-repeat fixed;
+}
+
+.fullscreen-bg2 {
+  background: url("../img/kids.jpg") center/cover no-repeat fixed;
+}
+
+.fullscreen-bg3 {
+  background: url("../img/eng-kids.jpg") center/cover no-repeat fixed;
+}
+
+.fullscreen-bg4 {
+  background: url("../img/Image.jpg") center/cover no-repeat fixed;
+}
+
+.footer {
+  background: #333;
+  text-align: center;
+  justify-self: flex-end;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__body {
+  max-width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 30px 20px;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
