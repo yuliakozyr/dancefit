@@ -476,7 +476,6 @@ p {
 }
 
 .contacts__left img {
-  display: block;
   max-width: 100%;
 }
 
@@ -556,9 +555,10 @@ p {
             order: 2;
     margin: 5% 0 0 0;
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     max-width: 100%;
+    max-height: 100%;
   }
   .contacts__buttons {
     -webkit-box-orient: vertical;
