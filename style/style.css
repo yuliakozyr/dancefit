@@ -575,36 +575,32 @@ p {
 }
 
 .fullscreen-bg1 {
-  background: url("../img/dancefit-grown-ups.jpg");
+  background: url('../img/dancefit-grown-ups.jpg');
 }
 
 .fullscreen-bg2 {
-  background: url("../img/kids.jpg");
+  background: url('../img/kids.jpg');
 }
 
 .fullscreen-bg3 {
-  background: url("../img/eng-kids.jpg");
+  background: url('../img/eng-kids.jpg');
 }
 
 .fullscreen-bg4 {
-  background: url("../img/Image.jpg");
+  background: url('../img/Image.jpg');
 }
+
 .fullscreen-bg1,
 .fullscreen-bg2,
 .fullscreen-bg3,
 .fullscreen-bg4 {
   
- background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        background-position: center center;
-        background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-/*@media
+@media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
 only screen and (     -o-min-device-pixel-ratio: 2/1),
@@ -616,8 +612,8 @@ only screen and (                min-resolution: 2dppx) {
 .fullscreen-bg3,
 .fullscreen-bg4 {
   
-  background-attachment: scroll;
-}*/
+  background-attachment: static;
+}
 
 .footer {
   background: #333;
