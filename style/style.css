@@ -620,6 +620,16 @@ only screen and (                min-resolution: 2dppx) {
   background-attachment: scroll;
   }
 }
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */ 
+  .fullscreen-bg1,
+.fullscreen-bg2,
+.fullscreen-bg3,
+.fullscreen-bg4 {
+  
+  background-attachment: scroll;
+  }
+}
 
 
 .footer {
