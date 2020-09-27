@@ -605,7 +605,18 @@ p {
   height: 100vh;
   width: 100%;
 }
-
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  .fullscreen-bg1,
+.fullscreen-bg2,
+.fullscreen-bg3,
+.fullscreen-bg4 {
+  
+  background-attachment: static;
+  }
+}
 @supports (-webkit-touch-callout: none) {
   /* CSS specific to iOS devices */ 
   .fullscreen-bg1,
