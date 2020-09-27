@@ -594,13 +594,18 @@ p {
 .fullscreen-bg2,
 .fullscreen-bg3,
 .fullscreen-bg4 {
-  
+
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-position: center;
+  height: 100%;
+        width: 100%;
 }
-@media
+/*@media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
 only screen and (     -o-min-device-pixel-ratio: 2/1),
@@ -613,7 +618,7 @@ only screen and (                min-resolution: 2dppx) {
 .fullscreen-bg4 {
   
   background-attachment: static;
-}
+}*/
 
 .footer {
   background: #333;
