@@ -618,7 +618,8 @@ only screen and (                min-resolution: 2dppx) {
 .fullscreen-bg4 {
   
   background-attachment: static;
-
+  }
+}
 
 .footer {
   background: #333;
