@@ -613,7 +613,7 @@ p {
 .fullscreen-bg3,
 .fullscreen-bg4 {
   
-  background-attachment: scroll;
+  background-attachment: static;
   }
 }
 
