@@ -575,19 +575,19 @@ p {
 }
 
 .fullscreen-bg1 {
-  background: url("../img/dancefit-grown-ups.jpg") center/cover no-repeat fixed;
+  background: url("../img/dancefit-grown-ups.jpg");
 }
 
 .fullscreen-bg2 {
-  background: url("../img/kids.jpg") center/cover no-repeat fixed;
+  background: url("../img/kids.jpg");
 }
 
 .fullscreen-bg3 {
-  background: url("../img/eng-kids.jpg") center/cover no-repeat fixed;
+  background: url("../img/eng-kids.jpg");
 }
 
 .fullscreen-bg4 {
-  background: url("../img/Image.jpg") center/cover no-repeat fixed;
+  background: url("../img/Image.jpg");
 }
 .fullscreen-bg1,
 .fullscreen-bg2,
