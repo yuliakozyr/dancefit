@@ -290,6 +290,7 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  align-items: center;
   padding: 20px;
   position: relative;
 }
