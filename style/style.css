@@ -614,7 +614,7 @@ p {
 .fullscreen-bg3,
 .fullscreen-bg4 {
   
-  background-attachment: static;
+  background-attachment: scroll;
   }
 }
 @supports (-webkit-touch-callout: none) {
@@ -624,7 +624,7 @@ p {
 .fullscreen-bg3,
 .fullscreen-bg4 {
   
-  background-attachment: static;
+  background-attachment: scroll;
   }
 }
 
